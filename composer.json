@@ -1,9 +1,14 @@
 {
-    "name": "stevegrunwell/time-constants",
-    "description": "A series of constants designed to make it easier to express time in PHP applications",
+    "name": "repat/date-constants",
+    "description": "A series of constants designed to make it easier to express dates in PHP applications",
     "type": "library",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Repat",
+            "email": "repat@repat.de",
+            "homepage": "https://repat.de"
+        },
         {
             "name": "Steve Grunwell",
             "email": "steve@stevegrunwell.com",
@@ -11,12 +16,12 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/stevegrunwell/time-constants/issues",
-        "source": "https://github.com/stevegrunwell/time-constants"
+        "issues": "https://github.com/repat/date-constants/issues",
+        "source": "https://github.com/repat/date-constants"
     },
     "require": {},
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.13",
+        "friendsofphp/php-cs-fixer": "^2.14",
         "phpunit/phpunit": "^6.0"
     },
     "autoload": {

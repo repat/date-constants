@@ -1,68 +1,69 @@
-# Time Constants
+# Date Constants
+[![Build Status](https://travis-ci.org/repat/date-constants.svg?branch=develop)](https://travis-ci.org/repat/date-constants)
+[![Packagist](https://img.shields.io/packagist/v/repat/date-constants.svg)](https://packagist.org/packages/repat/date-constants)
 
-[![Build Status](https://travis-ci.org/stevegrunwell/time-constants.svg?branch=develop)](https://travis-ci.org/stevegrunwell/time-constants)
-[![Packagist](https://img.shields.io/packagist/v/stevegrunwell/time-constants.svg)](https://packagist.org/packages/stevegrunwell/time-constants)
+The **Date Constants** package defines a number of useful PHP constants within your application, making it easier to express measures of dates.
 
-
-The Time Constants package defines a number of useful PHP constants within your application, making it easier to express measures of time.
-
-For example, assume we have a `cache()` function that accepts three arguments:
-
-1. The cache key.
-2. The value to cache.
-3. The amount of time (in seconds) to cache the value.
-
-Currently, caching a value for 24 hours might look something like this:
-
-```php
-cache($cacheKey, $value, 24 * 60 * 60);
-```
-
-Instead of spending the time figuring out what `24 * 60 * 60` means (or the fact that `86400` is meant to be one day in seconds), **Time Constants** allows you to represent the time using an easy-to-understand PHP constant:
-
-```php
-cache($cacheKey, $value, DAY_IN_SECONDS);
-```
-
-If the requirements changed and we needed to cache the value for multiple days, we can rewrite it as:
-
-```php
-cache($cacheKey, $value, 5 * DAY_IN_SECONDS);
-```
-
-These constants may seem familiar to WordPress developers, as they're absolutely [inspired by WordPress' use of time constants](https://codex.wordpress.org/Easier_Expression_of_Time_Constants). This package goes a bit further, however, adding `*_IN_MINUTES` constants, for easier use with libraries like [Laravel's `Cache` facade](https://laravel.com/docs/5.6/cache#cache-usage).
+These constants may seem familiar to Laravel developers, as they're absolutely [inspired by Nesbot\Carbons use of date constants](https://carbon.nesbot.com/docs/#api-constants). It's shoutout to the `stevegrunwell/time-constants` package.
 
 ## Installation
-
-Time Constants is intended to be installed via Composer:
+Date Constants is intended to be installed via Composer:
 
 ```sh
-$ composer require stevegrunwell/time-constants
+$ composer require repat/date-constants
 ```
 
 The package has been configured to automatically expose the `constants.php` file via the Composer-generated autoloader, so you'll be ready to use the constants as soon as the package has been installed!
 
 ## Defined constants
-
 This is a list of all constants defined by this package, along with their values. Each constant is wrapped in a `if (! defined(...))` conditional, ensuring these constants can easily be redefined if necessary and won't conflict with existing constants.
 
-> Please note that these constants are defined for convenience, and not necessarily for accuracy; all months are treated as 30 days, and years as 365 days. If you need support for leap years or more advanced measures of time, you might consider [PHP's `DateTime` class](http://php.net/manual/en/book.datetime.php) or [Nesbot's Carbon package](https://carbon.nesbot.com/docs/).
+### From Carbon
+* `YEARS_PER_CENTURY` (100)
+* `YEARS_PER_DECADE` (10)
+* `MONTHS_PER_YEAR` (12)
+* `WEEKS_PER_YEAR` (52)
+* `DAYS_PER_WEEK` (7)
+* `HOURS_PER_DAY` (24)
 
-### Time based in seconds
+#### Days of the week
+* `SUNDAY` (0)
+* `MONDAY` (1)
+* `TUESDAY` (2)
+* `WEDNESDAY` (3)
+* `THURSDAY` (4)
+* `FRIDAY` (5)
+* `SATURDAY` (6)
 
-* `ONE_SECOND` (1 second)
-* `MINUTE_IN_SECONDS` (60 seconds)
-* `HOUR_IN_SECONDS` (3600 seconds)
-* `DAY_IN_SECONDS` (86,400 seconds)
-* `WEEK_IN_SECONDS` (604,800 seconds)
-* `MONTH_IN_SECONDS` (2,592,000 seconds)
-* `YEAR_IN_SECONDS` (31,536,000 seconds)
+### Misc
+* `DAYS_PER_YEAR` (365)
+* `DAYS_PER_LEAP_YEAR` (366)
+* `DAYS_PER_FORTNIGHT` (14)
 
-### Time based in minutes
+### Months
+* `JANUARY` (1)
+* `FEBRUARY` (2)
+* `MARCH` (3)
+* `APRIL` (4)
+* `MAY` (5)
+* `JUNE` (6)
+* `JULY` (7)
+* `AUGUST` (8)
+* `SEPTEMBER` (9)
+* `OCTOBER` (19)
+* `NOVEMBER` (11)
+* `DECEMBER` (12)
 
-* `ONE_MINUTE` (1 minute)
-* `HOUR_IN_MINUTES` (60 minutes)
-* `DAY_IN_MINUTES` (1,440 minutes)
-* `WEEK_IN_MINUTES` (10,080 minutes)
-* `MONTH_IN_MINUTES` (43,200 minutes)
-* `YEAR_IN_MINUTES` (525,600 minutes)
+#### Amount of days
+* `DAYS_JAN` (31)
+* `DAYS_FEB` (28)
+* `DAYS_FEB_LEAP` (29)
+* `DAYS_MAR` (31)
+* `DAYS_APR` (30)
+* `DAYS_JUN` (31)
+* `DAYS_JUL` (30)
+* `DAYS_AUG` (31)
+* `DAYS_SEP` (30)
+* `DAYS_OCT` (31)
+* `DAYS_NOV` (30)
+* `DAYS_DEC` (31)

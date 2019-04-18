@@ -1,87 +1,196 @@
 <?php
 /**
- * Defines useful time-based constants.
+ * Defines useful date-based constants.
  *
- * @package SteveGrunwell\TimeConstants
+ * @package Repat\DateConstants
  */
 
-/**
- * Time based in seconds.
- *
- * This is commonly used for things like cache expirations or task scheduling, and are heavily
- * inspired by WordPress' time constants.
- *
- * @link https://codex.wordpress.org/Easier_Expression_of_Time_Constants
- */
+/*
+|--------------------------------------------------------------------------
+| From Nesbot\Carbon
+|--------------------------------------------------------------------------
+*/
 
-/* One second. */
-if (! defined('ONE_SECOND')) {
-    define('ONE_SECOND', 1);
+if (! defined('YEARS_PER_CENTURY')) {
+    define('YEARS_PER_CENTURY', 100);
 }
 
-/* One minute = 60 seconds. */
-if (! defined('MINUTE_IN_SECONDS')) {
-    define('MINUTE_IN_SECONDS', 60);
+if (! defined('YEARS_PER_DECADE')) {
+    define('YEARS_PER_CENTURY', 10);
 }
 
-/* One hour = 60 minutes. */
-if (! defined('HOUR_IN_SECONDS')) {
-    define('HOUR_IN_SECONDS', 60 * MINUTE_IN_SECONDS);
+if (! defined('MONTHS_PER_YEAR')) {
+    define('MONTHS_PER_YEAR', 12);
 }
 
-/* One day = 24 hours. */
-if (! defined('DAY_IN_SECONDS')) {
-    define('DAY_IN_SECONDS', 24 * HOUR_IN_SECONDS);
+if (! defined('WEEKS_PER_YEAR')) {
+    define('WEEKS_PER_YEAR', 52);
 }
 
-/* One week = 7 days. */
-if (! defined('WEEK_IN_SECONDS')) {
-    define('WEEK_IN_SECONDS', 7 * DAY_IN_SECONDS);
+if (! defined('DAYS_PER_WEEK')) {
+    define('DAYS_PER_WEEK', 7);
 }
 
-/* For common usage, assume one month = 30 days. */
-if (! defined('MONTH_IN_SECONDS')) {
-    define('MONTH_IN_SECONDS', 30 * DAY_IN_SECONDS);
+if (! defined('HOURS_PER_DAY')) {
+    define('HOURS_PER_DAY', 24);
 }
 
-/* For common usage, assume one year = 365 days. */
-if (! defined('YEAR_IN_SECONDS')) {
-    define('YEAR_IN_SECONDS', 365 * DAY_IN_SECONDS);
+/*
+|--------------------------------------------------------------------------
+| Days of the week from Carbon
+|--------------------------------------------------------------------------
+*/
+
+if (! defined('SUNDAY')) {
+    define('SUNDAY', 0);
 }
 
-/**
- * Time based in minutes.
- *
- * For platforms that measure time based in minutes (such as Laravel's Cache facade), these
- * constants provide similar functionality.
- */
-
-/* One second. */
-if (! defined('ONE_MINUTE')) {
-    define('ONE_MINUTE', 1);
+if (! defined('MONDAY')) {
+    define('MONDAY', 1);
 }
 
-/* One hour = 60 minutes. */
-if (! defined('HOUR_IN_MINUTES')) {
-    define('HOUR_IN_MINUTES', 60);
+if (! defined('TUESDAY')) {
+    define('TUESDAY', 2);
 }
 
-/* One day = 24 hours. */
-if (! defined('DAY_IN_MINUTES')) {
-    define('DAY_IN_MINUTES', 24 * HOUR_IN_MINUTES);
+if (! defined('WEDNESDAY')) {
+    define('WEDNESDAY', 3);
 }
 
-/* One week = 7 days. */
-if (! defined('WEEK_IN_MINUTES')) {
-    define('WEEK_IN_MINUTES', 7 * DAY_IN_MINUTES);
+if (! defined('THURSDAY')) {
+    define('THURSDAY', 4);
 }
 
-/* For common usage, assume one month = 30 days. */
-if (! defined('MONTH_IN_MINUTES')) {
-    define('MONTH_IN_MINUTES', 30 * DAY_IN_MINUTES);
+if (! defined('FRIDAY')) {
+    define('FRIDAY', 5);
 }
 
-/* For common usage, assume one year = 365 days. */
-if (! defined('YEAR_IN_MINUTES')) {
-    define('YEAR_IN_MINUTES', 365 * DAY_IN_MINUTES);
+if (! defined('SATURDAY')) {
+    define('SATURDAY', 6);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Misc
+|--------------------------------------------------------------------------
+*/
+
+if (! defined('DAYS_PER_YEAR')) {
+    define('DAYS_PER_YEAR', 365);
+}
+
+if (! defined('DAYS_PER_LEAP_YEAR')) {
+    define('DAYS_PER_LEAP_YEAR', 366);
+}
+
+if (! defined('DAYS_PER_FORTNIGHT')) {
+    define('DAYS_PER_FORTNIGHT', 14);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Months
+|--------------------------------------------------------------------------
+*/
+
+if (! defined('JANUARY')) {
+    define('JANUARY', 1);
+}
+
+if (! defined('FEBRUARY')) {
+    define('FEBRUARY', 2);
+}
+
+if (! defined('MARCH')) {
+    define('MARCH', 3);
+}
+
+if (! defined('APRIL')) {
+    define('APRIL', 4);
+}
+
+if (! defined('MAY')) {
+    define('MAY', 5);
+}
+
+if (! defined('JUNE')) {
+    define('JUNE', 6);
+}
+
+if (! defined('JULY')) {
+    define('JULY', 7);
+}
+
+if (! defined('AUGUST')) {
+    define('AUGUST', 8);
+}
+
+if (! defined('SEPTEMBER')) {
+    define('SEPTEMBER', 9);
+}
+
+if (! defined('OCTOBER')) {
+    define('OCTOBER', 10);
+}
+
+if (! defined('NOVEMBER')) {
+    define('NOVEMBER', 11);
+}
+
+if (! defined('DECEMBER')) {
+    define('DECEMBER', 12);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Days of Months
+|--------------------------------------------------------------------------
+*/
+
+if (! defined('DAYS_JAN')) {
+    define('DAYS_JAN', 31);
+}
+
+if (! defined('DAYS_FEB')) {
+    define('DAYS_FEB', 28);
+}
+
+if (! defined('DAYS_FEB_LEAP')) {
+    define('DAYS_FEB_LEAP', 29);
+}
+
+if (! defined('DAYS_MAR')) {
+    define('DAYS_MAR', 31);
+}
+
+if (! defined('DAYS_APR')) {
+    define('DAYS_APR', 30);
+}
+
+if (! defined('DAYS_JUN')) {
+    define('DAYS_JUN', 31);
+}
+
+if (! defined('DAYS_JUL')) {
+    define('DAYS_JUL', 30);
+}
+
+if (! defined('DAYS_AUG')) {
+    define('DAYS_AUG', 31);
+}
+
+if (! defined('DAYS_SEP')) {
+    define('DAYS_SEP', 30);
+}
+
+if (! defined('DAYS_OCT')) {
+    define('DAYS_OCT', 31);
+}
+
+if (! defined('DAYS_NOV')) {
+    define('DAYS_NOV', 30);
+}
+
+if (! defined('DAYS_DEC')) {
+    define('DAYS_DEC', 31);
 }

@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Version 2.0.0] - 2019-04-18
+
+* Forked `stevegrunwell/time-constants` and added first date constants
+
 ## [Version 1.1.0] - 2019-01-01
 
 * Addition of both `ONE_SECOND` and `ONE_MINUTE`, which are both equal to `1` ([#2]).
