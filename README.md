@@ -4,7 +4,7 @@
 
 The **Date Constants** package defines a number of useful PHP constants within your application, making it easier to express measures of dates.
 
-These constants may seem familiar to Laravel developers, as they're absolutely [inspired by Nesbot\Carbons use of date constants](https://carbon.nesbot.com/docs/#api-constants). Also, shoutout to the [`stevegrunwell/time-constants`](https://github.com/stevegrunwell/time-constants) package!
+These constants may seem familiar to Laravel developers, as they're absolutely [inspired by Nesbot\Carbons use of date constants](https://carbon.nesbot.com/docs/#api-constants). Also, shoutout to the [`stevegrunwell/time-constants`](https://github.com/stevegrunwell/time-constants) package for the idea.
 
 ## Installation
 Date Constants is intended to be installed via Composer:
@@ -71,3 +71,15 @@ This is a list of all constants defined by this package, along with their values
 
 ## TODO
 * Finish Tests
+
+
+## Version
+* Version 2.0.1
+
+## Contact
+#### repat
+* Homepage: https://repat.de
+* e-mail: repat@repat.de
+* Twitter: [@repat123](https://twitter.com/repat123 "repat123 on twitter")
+
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=repat&url=https://github.com/repat/date-constants&title=date-constants&language=&tags=github&category=software)

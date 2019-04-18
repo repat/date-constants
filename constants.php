@@ -16,7 +16,7 @@ if (! defined('YEARS_PER_CENTURY')) {
 }
 
 if (! defined('YEARS_PER_DECADE')) {
-    define('YEARS_PER_CENTURY', 10);
+    define('YEARS_PER_DECADE', 10);
 }
 
 if (! defined('MONTHS_PER_YEAR')) {
