@@ -4,7 +4,7 @@
 
 The **Date Constants** package defines a number of useful PHP constants within your application, making it easier to express measures of dates.
 
-These constants may seem familiar to Laravel developers, as they're absolutely [inspired by Nesbot\Carbons use of date constants](https://carbon.nesbot.com/docs/#api-constants). It's shoutout to the `stevegrunwell/time-constants` package.
+These constants may seem familiar to Laravel developers, as they're absolutely [inspired by Nesbot\Carbons use of date constants](https://carbon.nesbot.com/docs/#api-constants). Also, shoutout to the [`stevegrunwell/time-constants`](https://github.com/stevegrunwell/time-constants) package!
 
 ## Installation
 Date Constants is intended to be installed via Composer:
@@ -67,3 +67,7 @@ This is a list of all constants defined by this package, along with their values
 * `DAYS_OCT` (31)
 * `DAYS_NOV` (30)
 * `DAYS_DEC` (31)
+
+
+## TODO
+* Finish Tests
